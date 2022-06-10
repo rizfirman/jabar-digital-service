@@ -630,7 +630,7 @@ export default {
     };
   },
   async mounted() {
-    const urlProvinsi = `http://www.emsifa.com/api-wilayah-indonesia/api/provinces.json`;
+    const urlProvinsi = `https://www.emsifa.com/api-wilayah-indonesia/api/provinces.json`;
 
     const responseProvinsi = await axios.get(urlProvinsi);
     this.provinsiList = responseProvinsi.data;
@@ -639,7 +639,7 @@ export default {
   watch: {
     provinsi(newValue) {
       if (newValue !== "") {
-        const urlKota = `http://www.emsifa.com/api-wilayah-indonesia/api/regencies/${newValue}.json`;
+        const urlKota = `https://www.emsifa.com/api-wilayah-indonesia/api/regencies/${newValue}.json`;
         console.log("urlKota", urlKota);
         const responseKota = axios
           .get(urlKota)
@@ -662,7 +662,7 @@ export default {
     },
     kota(newValue) {
       if (newValue !== "") {
-        const urlDesa = `http://www.emsifa.com/api-wilayah-indonesia/api/districts/${newValue}.json`;
+        const urlDesa = `https://www.emsifa.com/api-wilayah-indonesia/api/districts/${newValue}.json`;
         console.log("urlkecamatan", urlDesa);
         const responseKecamatan = axios
           .get(urlDesa)
@@ -684,7 +684,7 @@ export default {
     },
     kecamatan(newValue) {
       if (newValue !== "") {
-        const urlDesa = `http://www.emsifa.com/api-wilayah-indonesia/api/villages/${newValue}.json`;
+        const urlDesa = `https://www.emsifa.com/api-wilayah-indonesia/api/villages/${newValue}.json`;
         console.log("urlDesa", urlDesa);
         const responseDesa = axios
           .get(urlDesa)
